@@ -133,7 +133,7 @@ void setup() {
   
   if(wm_nonblocking) wifi.setConfigPortalBlocking(false);
   //WiFiManager wifi;
-  strip.setBrightness(100);
+  strip.setBrightness(80);
   stateWifi = EEPROM.read(0);
   stateMode = EEPROM.read(0);
   Serial.println(String()+"stateWifisetup=" + stateWifi + "stateModesetup=" + stateMode);
@@ -142,7 +142,7 @@ void setup() {
   {
   showAP();
   wifi.setConfigPortalTimeout(60);
-  bool connectWIFI = wifi.autoConnect("JAM DIGITAL 2L", "00000000");
+  bool connectWIFI = wifi.autoConnect("JAM DIGITAL KECIL", "00000000");
   //keluarkan tulisan RTC
   if (!connectWIFI) 
    {
